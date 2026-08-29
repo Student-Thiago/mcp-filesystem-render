@@ -1,0 +1,13 @@
+name = "mcp-filesystem-d1"
+main = "src/index.js"
+compatibility_date = "2026-08-01"
+
+# Create the database first, then paste the printed database_id here:
+#   npx wrangler d1 create mcp-filesystem
+[[d1_databases]]
+binding = "DB"
+database_name = "mcp-filesystem"
+database_id = "PASTE_DATABASE_ID_HERE"
+
+# MCP_TOKEN is a secret, not a var. Never put it in this file:
+#   npx wrangler secret put MCP_TOKEN
