@@ -1,0 +1,12 @@
+name = "mcp-filesystem"
+main = "src/index.js"
+compatibility_date = "2026-08-01"
+
+# The R2 bucket that holds the files. Create it first:
+#   npx wrangler r2 bucket create mcp-filesystem
+[[r2_buckets]]
+binding = "FILES"
+bucket_name = "mcp-filesystem"
+
+# MCP_TOKEN is a secret, not a var. Never put it in this file:
+#   npx wrangler secret put MCP_TOKEN
