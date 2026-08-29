@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: mcp-filesystem
+    runtime: node
+    plan: starter
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /healthz
+    envVars:
+      - key: FILESYSTEM_MCP_ROOT
+        value: /var/data
+      - key: FILESYSTEM_MCP_TOKEN
+        generateValue: true
+    disk:
+      name: files
+      mountPath: /var/data
+      sizeGB: 1
