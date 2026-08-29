@@ -1,0 +1,16 @@
+{
+  "name": "mcp-filesystem-render",
+  "version": "2.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.19.1",
+    "zod": "3.25.76"
+  }
+}
